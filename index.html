@@ -605,22 +605,43 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:2rem 4%
         <a href="mailto:mmmeesam.r@gmail.com" class="soc-btn" title="Email">✉️</a>
       </div>
     </div>
-    <div class="c-form rev-r">
-      <div class="f-row">
-        <div class="f-group"><label class="f-lbl">YOUR NAME</label><input type="text" class="f-inp" placeholder="John Doe"></div>
-        <div class="f-group"><label class="f-lbl">YOUR EMAIL</label><input type="email" class="f-inp" placeholder="john@email.com"></div>
-      </div>
-      <div class="f-group"><label class="f-lbl">I'M INTERESTED IN</label>
-        <select class="f-sel">
-          <option value="" disabled selected>Select a service...</option>
-          <option>Web Development</option><option>UI/UX Design</option>
-          <option>Electrical Engineering</option><option>Freelance Project</option>
-          <option>Collaboration</option><option>Just Saying Hi</option>
-        </select>
-      </div>
-      <div class="f-group"><label class="f-lbl">MESSAGE</label><textarea class="f-ta" placeholder="Tell me about your project..."></textarea></div>
-      <button class="f-btn" id="sendBtn"><span id="sendLbl">SEND_MESSAGE.EXE →</span></button>
+
+
+
+    <form action="https://formspree.io/f/mdalpeej" method="POST" class="c-form rev-r">
+  <div class="f-row">
+    <div class="f-group">
+      <label class="f-lbl">YOUR NAME</label>
+      <input type="text" name="name" class="f-inp" placeholder="John Doe" required>
     </div>
+    <div class="f-group">
+      <label class="f-lbl">YOUR EMAIL</label>
+      <input type="email" name="email" class="f-inp" placeholder="john@email.com" required>
+    </div>
+  </div>
+
+  <div class="f-group">
+    <label class="f-lbl">I'M INTERESTED IN</label>
+    <select name="service" class="f-sel">
+      <option value="" disabled selected>Select a service...</option>
+      <option value="Web Development">Web Development</option>
+      <option value="UI/UX Design">UI/UX Design</option>
+      <option value="Electrical Engineering">Electrical Engineering</option>
+      <option value="Freelance Project">Freelance Project</option>
+      <option value="Collaboration">Collaboration</option>
+      <option value="Just Saying Hi">Just Saying Hi</option>
+    </select>
+  </div>
+
+  <div class="f-group">
+    <label class="f-lbl">MESSAGE</label>
+    <textarea name="message" class="f-ta" placeholder="Tell me about your project...." required></textarea>
+  </div>
+
+  <button type="submit" class="f-btn" id="sendBtn">
+    <span id="sendLbl">SEND_MESSAGE.EXE →</span>
+  </button>
+</form>
   </div>
 </div></section>
 
